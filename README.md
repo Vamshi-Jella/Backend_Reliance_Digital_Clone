@@ -8,3 +8,17 @@ npm install express mongoose dotenv body-parser nodemon
   npm run dev - Project will get excuted and shows output
   nodemon vala file ni save chestey automatic ga changes update iyi output vastadi
 - Create Server and Route
+- Connect with MongoDb
+  .env file lo MONGO_URI="link<our_databaseuser_password>/Project_Name?" 
+  .env file lo unnavi access cheyali antey 
+  --dotEnv.config()
+  write " process.env.Variable " whereever it required
+  Mongoose ni require cheshi MongoDb connect cheyali antey
+  const mongoose= require("mongoose");
+  mongoose.connect(process.env.MONGO_URI)
+  .then(()=>console.log("MongoDB connected successfully!"))
+  .catch((error)=>console.log(error))
+
+- Vendor Registration
+- Creating models - each vendor ki authentication echi products add chesukovachu
+  Vendor ki unique Authentication kosam username, email password estam
